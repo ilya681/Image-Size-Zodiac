@@ -67,6 +67,11 @@ chooseFile.addEventListener("change", (event) => {
     const img = new Image();
     img.onload = function () {
       originalImg = img;
+
+      // document.querySelector(".div-img").style.width = `${img.width}px`;
+      // document.querySelector(".div-img").style.height = `${img.height}px`;
+      // document.querySelector(".div-x").style.width = `${img.width}px`;
+      // document.querySelector(".div-x").style.height = `${img.height}px`;
       width.innerText = `Width => ${img.width}px`;
       height.innerText = `Height => ${img.height}px`;
       // اطلاعات ارتفاع و عرض اصلی را هم پاک نکنید
