@@ -119,7 +119,7 @@ function Resolutioan() {
         img1Small.onload = () => URL.revokeObjectURL(url);
       }
     },
-    "image/webp",
+    "image/png",
     0.8,
   );
 }
