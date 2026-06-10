@@ -28,9 +28,10 @@ body {
   display: none;
 }
 .div-Chooser {
-  width: 300px;
+  width: 30%;
   height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   background-color: #1a1110;
@@ -75,12 +76,16 @@ h2 {
   padding: 10px;
   color: #dcd7c2;
 }
-.div-Chooser input {
+.div-Chooser .number,
+.quality,
+.choose-file,
+.FormatChooser {
   padding: 10px;
-  border: 2px solid rgb(107, 52, 52);
+  border: 3px solid rgb(107, 52, 52);
   border-radius: 10px;
-  min-height: 50px;
+  /* min-height: 50px; */
   height: max-content;
+  /* width: 200px; */
   background-color: #c17a4a;
 }
 .choose-file::file-selector-button,
@@ -107,10 +112,71 @@ h2 {
   -moz-appearance: textfield; /* برای فایرفاکس */
   appearance: textfield;
 }
+input::placeholder {
+  font-weight: bold;
+  color: rgba(220, 215, 194, 0.6);
+}
 
 .choose-file {
   cursor: pointer;
 }
+
+.FormatChooser {
+  height: 50px;
+  cursor: pointer;
+  align-items: start;
+  justify-content: space-around;
+  flex-direction: column;
+  display: flex;
+  gap: 1px;
+  padding: 0;
+  transition: all 0.5s ease-in-out;
+}
+.FormatChooser p {
+  margin: 5px 5px;
+  color: #dcd7c2;
+  text-align: center;
+  padding: 6px 10px;
+  width: max-content;
+  height: max-content;
+  border-radius: 8px; /* گوشه‌های گرد */
+  font-size: 20px;
+  background-color: #1a1110;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+}
+.FormatChooser p:hover {
+  background-color: #c17a4a;
+}
+
+.ulChooser {
+  width: 50%;
+  height: max-content;
+  position: relative;
+  background-color: #c17a4a;
+  z-index: -10;
+  opacity: 0;
+  margin: 0;
+  transition: all 0.5s ease-in-out;
+  border: 3px solid rgb(107, 52, 52);
+  border-top: 0px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 5px;
+}
+.liChooser {
+  width: 100%;
+  height: max-content;
+  list-style-type: none;
+  margin: 5px 5px;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+.liChooser:hover {
+  transform: scale(1.1) translateX(20px);
+}
+
 .Show {
   margin-top: 10px;
   text-decoration: none;
@@ -130,7 +196,14 @@ h2 {
 .div-Chooser button:hover {
   transform: scale(1.05);
 }
-.div-Chooser p {
+.div-Chooser .width,
+.height,
+.KB,
+.B,
+.NewB,
+.NewKB,
+.Newheight,
+.Newwidth {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 20px;
   margin: 0;
@@ -248,7 +321,6 @@ h2 {
     width: 30%;
     z-index: 10;
     left: -100%;
-    width: 100%;
   }
   .hamburger {
     display: block;
@@ -259,7 +331,17 @@ h2 {
     z-index: 20;
   }
 }
+@media screen and (max-width: 800px) {
+  .div-Chooser {
+    width: 40%;
+  }
+}
+
 @media screen and (max-width: 600px) {
+  .div-Chooser {
+    width: 45%;
+    zoom: 85%;
+  }
   .div-img {
     height: 60%;
   }
@@ -268,11 +350,17 @@ h2 {
   }
 }
 @media screen and (max-width: 450px) {
+  .div-Chooser {
+    width: 50%;
+  }
   .div-img {
     height: 50%;
   }
 }
 @media screen and (max-width: 350px) {
+  .div-Chooser {
+    width: 60%;
+  }
   .div-img {
     height: 40%;
   }

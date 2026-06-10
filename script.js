@@ -17,9 +17,14 @@ const save = document.querySelector(".SAVE");
 const divChoose = document.querySelector(".div-Chooser");
 const hamburger = document.querySelector(".hamburger");
 const cloes = document.querySelector(".cloes");
+const FormatChooser = document.querySelector(".FormatChooser");
+const ulChooser = document.querySelector(".ulChooser");
+const liChooser = document.querySelectorAll(".liChooser");
+const FormatChooser_P = document.querySelector(".FormatChooser p");
 let value = 50;
 let currentBlob = null;
-
+let isclicked_FormatChooser = false;
+let format = "webp";
 range.value = value;
 valueRange.innerText = `${value}%`;
 img2Big.style.clipPath = `inset(0 50% 0 0)`;
@@ -51,17 +56,22 @@ chooseFile.addEventListener("change", (event) => {
   const file = event.target.files[0];
   if (!file) return;
 
-  // نمایش حجم فایل اصلی (به کیلوبایت)
+  Newwidth.innerHTML = "";
+  Newheight.innerHTML = "";
+  NewKB.innerHTML = "";
+  NewB.innerHTML = "";
+  number.value = "";
+  FormatChooser_P.innerHTML = "";
+  FormatChooser_P.innerText = "Chooser Format";
+
   const originalSizeKB = (file.size / 1024).toFixed(2);
   KB.innerText = `KB => ${originalSizeKB}`;
   B.innerText = `B => ${file.size}`;
 
-  // نمایش تصاویر در المان‌های img
   const url = URL.createObjectURL(file);
   img2Big.src = url;
   img1Small.src = url;
 
-  // خواندن تصویر برای ذخیره در متغیر originalImg
   const reader = new FileReader();
   reader.onload = function (e) {
     const img = new Image();
@@ -82,12 +92,23 @@ chooseFile.addEventListener("change", (event) => {
 });
 
 Show.addEventListener("click", () => {
-  Resolutioan();
+  Resolutioan(format);
 });
 number.addEventListener("click", () => {
-  Resolutioan();
+  Resolutioan(format);
 });
-function Resolutioan() {
+
+liChooser.forEach((element) => {
+  element.addEventListener("click", (event) => {
+    console.log(event.target.innerText);
+    FormatChooser_P.innerHTML = "";
+    FormatChooser_P.innerText = event.target.innerText;
+    format = event.target.innerText;
+    Resolutioan(format);
+  });
+});
+
+function Resolutioan(Format) {
   let newWidth = parseFloat(number.value);
   if (isNaN(newWidth) || newWidth <= 0) {
     return;
@@ -119,12 +140,14 @@ function Resolutioan() {
         img1Small.onload = () => URL.revokeObjectURL(url);
       }
     },
-    "image/png",
-    0.8,
+    `image/${Format}`,
+    `.75`,
   );
 }
 
 save.addEventListener("click", () => {
+  const today = new Date();
+
   if (!currentBlob) {
     alert(
       "هیچ تصویر بهینه‌ای برای ذخیره وجود ندارد. لطفاً ابتدا تصویر را تغییر اندازه دهید.",
@@ -134,7 +157,7 @@ save.addEventListener("click", () => {
   const url = URL.createObjectURL(currentBlob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = `optimized-${Date.now()}.webp`;
+  link.download = `Zodiac  ${today.getHours()}-${today.getMinutes()}-${today.getSeconds()}.${format}`;
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -147,4 +170,19 @@ hamburger.addEventListener("click", () => {
 
 cloes.addEventListener("click", () => {
   divChoose.style.left = "-100%";
+});
+
+FormatChooser.addEventListener("click", () => {
+  if (!isclicked_FormatChooser) {
+    ulChooser.style.zIndex = "10";
+    ulChooser.style.opacity = "1";
+    FormatChooser.style.borderBottomLeftRadius = "0px";
+
+    isclicked_FormatChooser = true;
+  } else {
+    FormatChooser.style.borderBottomLeftRadius = "10px";
+    ulChooser.style.zIndex = "-10";
+    ulChooser.style.opacity = "0";
+    isclicked_FormatChooser = false;
+  }
 });
