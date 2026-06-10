@@ -58,12 +58,13 @@ body {
   margin: 0;
 }
 .cloes {
-  border: 3px solid black;
+  border: 3px solid #c17a4a;
   border-radius: 10px;
   width: 50px;
   text-align: center;
   margin: 0;
   display: none;
+  color: #c17a4a;
 }
 .div-Chooser input,
 button:focus {
@@ -168,8 +169,8 @@ input::placeholder {
   width: 100%;
   height: max-content;
   list-style-type: none;
-  margin: 5px 5px;
-  font-size: 20px;
+  margin: 10px 10px;
+  font-size: 25px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
 }
