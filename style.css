@@ -83,18 +83,9 @@ h2 {
   height: max-content;
   background-color: #c17a4a;
 }
-.choose-file::file-selector-button {
+.choose-file::file-selector-button,
+.choose-file::-webkit-file-upload-button {
   background-color: #1a1110; /* رنگ پس‌زمینه */
-  color: white; /* رنگ متن */
-  border: none; /* حذف حاشیه پیش‌فرض */
-  padding: 10px 20px; /* فاصله داخلی */
-  border-radius: 8px; /* گوشه‌های گرد */
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-..choose-file::-webkit-file-upload-button{
-    background-color: #1a1110; /* رنگ پس‌زمینه */
   color: white; /* رنگ متن */
   border: none; /* حذف حاشیه پیش‌فرض */
   padding: 10px 20px; /* فاصله داخلی */
