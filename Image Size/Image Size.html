@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="google3e6626f857f812b0" />
+    <meta
+      name="google-site-verification"
+      content="YfgN-p94OQuEqLj8vAECB5570uy-6jHcW93jGDXlBdg" />
+    <title>Image Size</title>
+
+    <link rel="shortcut icon" href="./img/IconSite.png" />
+    <link rel="stylesheet" href="./Image Size.css" />
+  </head>
+
+  <body> 
+    <img src="../img/hamburger-menu.png" class="hamburger" />
+
+    <div class="div-Chooser">
+      <div class="div-cloes">
+        <p class="cloes">X</p>
+      </div>
+      <h1>Choose Image</h1>
+      <input
+        type="file"
+        class="choose-file"
+        accept="image/*"
+        placeholder="Image" />
+      <br />
+      <p class="width"></p>
+      <p class="height"></p>
+      <p class="KB"></p>
+      <p class="B"></p>
+      <br />
+      <h2>Size Image</h2>
+      <input type="number" placeholder="1080" class="number" />
+      <br />
+
+      <div class="FormatChooser">
+        <p>Chooser Format</p>
+        <ul class="ulChooser">
+          <li class="liChooser">png</li>
+          <li class="liChooser">jpg</li>
+          <li class="liChooser">webp</li>
+          <li class="liChooser">bmp</li>
+        </ul>
+      </div>
+
+      <button type="button" class="Show">Show</button>
+      <br />
+      <p class="Newwidth"></p>
+      <p class="Newheight"></p>
+      <p class="NewKB"></p>
+      <p class="NewB"></p>
+      <br />
+      <a href="#" class="SAVE">SAVE</a>
+    </div>
+    <div class="div-continer">
+      <div class="div-img">
+        <img src="../img/cumputer-and-Code.jpg" class="img2Big" />
+        <img src="../img/cumputer-and-Code - SMALL.jpg" class="img1Small" />
+      </div>
+
+      <div class="div-x">
+        <input type="range" class="range" />
+        <p class="value-range"></p>
+      </div>
+    </div>
+  </body>
+
+  <script src="./script.js"></script>
+</html>

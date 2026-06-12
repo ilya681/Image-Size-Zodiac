@@ -1,0 +1,369 @@
+* {
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #1a1110;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+}
+
+
+.hamburger {
+  width: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.div-Chooser {
+  width: 30%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #180f0e;
+  padding: 10px;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  zoom: 90%;
+}
+.div-Chooser::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+  z-index: 50px;
+}
+.div-Chooser::-webkit-scrollbar-thumb {
+  background: #c17a4a;
+  border-radius: 5px;
+  z-index: 50px;
+}
+.div-cloes {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: right;
+  margin: 0;
+}
+.cloes {
+  border: 3px solid #c17a4a;
+  border-radius: 10px;
+  width: 50px;
+  text-align: center;
+  margin: 0;
+  display: none;
+  color: #c17a4a;
+}
+.div-Chooser input,
+button:focus {
+  outline: none;
+}
+.div-Chooser h1,
+h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+  padding: 10px;
+  color: #dcd7c2;
+}
+.div-Chooser .number,
+.quality,
+.choose-file,
+.FormatChooser {
+  padding: 10px;
+  border: 3px solid rgb(107, 52, 52);
+  border-radius: 10px;
+  /* min-height: 50px; */
+  height: max-content;
+  /* width: 200px; */
+  background-color: #c17a4a;
+}
+.choose-file::file-selector-button,
+.choose-file::-webkit-file-upload-button {
+  background-color: #1a1110; /* رنگ پس‌زمینه */
+  color: white; /* رنگ متن */
+  border: none; /* حذف حاشیه پیش‌فرض */
+  padding: 10px 20px; /* فاصله داخلی */
+  border-radius: 8px; /* گوشه‌های گرد */
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* تغییر استایل هنگام هاور */
+.choose-file::file-selector-button:hover {
+  background-color: #c17a4a;
+}
+.choose-file::-webkit-file-upload-button:hover {
+  background-color: #c17a4a;
+}
+
+.number {
+  -moz-appearance: textfield; /* برای فایرفاکس */
+  appearance: textfield;
+}
+input::placeholder {
+  font-weight: bold;
+  color: rgba(220, 215, 194, 0.6);
+}
+
+.choose-file {
+  cursor: pointer;
+}
+
+.FormatChooser {
+  height: 50px;
+  cursor: pointer;
+  align-items: start;
+  justify-content: space-around;
+  flex-direction: column;
+  display: flex;
+  gap: 1px;
+  padding: 0;
+  transition: all 0.5s ease-in-out;
+}
+.FormatChooser p {
+  margin: 5px 5px;
+  color: #dcd7c2;
+  text-align: center;
+  padding: 6px 10px;
+  width: max-content;
+  height: max-content;
+  border-radius: 8px; /* گوشه‌های گرد */
+  font-size: 20px;
+  background-color: #1a1110;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+}
+.FormatChooser p:hover {
+  background-color: #c17a4a;
+}
+
+.ulChooser {
+  width: 50%;
+  height: max-content;
+  position: relative;
+  background-color: #c17a4a;
+  z-index: -10;
+  opacity: 0;
+  margin: 0;
+  transition: all 0.5s ease-in-out;
+  border: 3px solid rgb(107, 52, 52);
+  border-top: 0px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 5px;
+}
+.liChooser {
+  width: 100%;
+  height: max-content;
+  list-style-type: none;
+  margin: 10px 10px;
+  font-size: 25px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+.liChooser:hover {
+  transform: scale(1.1) translateX(20px);
+}
+
+.Show {
+  margin-top: 10px;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border: 2px solid rgb(107, 52, 52);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: rgba(107, 52, 52, 0);
+  box-shadow: 0 0 4px 2px black;
+  background-color: #f9b23f;
+}
+.div-Chooser button:hover {
+  transform: scale(1.05);
+}
+.div-Chooser .width,
+.height,
+.KB,
+.B,
+.NewB,
+.NewKB,
+.Newheight,
+.Newwidth {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 5px;
+  color: #dcd7c2;
+}
+.SAVE {
+  background-color: #f9b23f;
+  position: sticky;
+  top: 100%;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border: 2px solid rgb(107, 52, 52);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-shadow: 0 0 4px 2px black;
+}
+.SAVE:hover {
+  transform: scale(1.05);
+}
+
+.div-continer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: 10px;
+}
+
+.div-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #f9b23f;
+  border-radius: 10px;
+  position: relative;
+  width: 90%;
+  height: 100%;
+}
+
+.div-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* border-radius: 50px; */
+  object-fit: cover;
+}
+
+.div-x {
+  width: 90%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.div-x p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 30px;
+  margin: 0;
+  color: #dcd7c2;
+}
+
+.range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 20px;
+  background-color: #c17a4a;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  /* background: linear-gradient(to right, #F9B23F, #C17A4A); */
+  background-color: #f9b23f;
+  cursor: pointer;
+}
+
+.range::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  /* background: linear-gradient(to right, antiquewhite, rgb(107, 52, 52)); */
+  background-color: #f9b23f;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+  .div-img {
+    height: 80%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .div-Chooser {
+    position: absolute;
+    width: 30%;
+    z-index: 10;
+    left: -100%;
+  }
+  .hamburger {
+    display: block;
+    z-index: 10;
+  }
+  .cloes {
+    display: block;
+    z-index: 20;
+  }
+}
+@media screen and (max-width: 800px) {
+  .div-Chooser {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .div-Chooser {
+    width: 45%;
+    zoom: 85%;
+  }
+  .div-img {
+    height: 60%;
+  }
+  .div-x {
+    zoom: 80%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .div-Chooser {
+    width: 50%;
+  }
+  .div-img {
+    height: 50%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .div-Chooser {
+    width: 60%;
+  }
+  .div-img {
+    height: 40%;
+  }
+}
