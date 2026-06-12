@@ -1,15 +1,15 @@
-# 🖼️ Image Size Reducer – کاهش حجم عکس آنلاین و رایگان
+# 🖼️ Image Size Phoenix – کاهش حجم عکس آنلاین و رایگان
 
 > ابزار تحت وب برای فشرده‌سازی تصاویر با حفظ کیفیت – بدون نیاز به نصب، بدون آپلود روی سرور، کاملاً خصوصی
 
-[![ساخته شده با HTML/CSS/JS](https://img.shields.io/badge/ساخته%20شده%20با-HTML%2FCSS%2FJS-orange)](https://github.com/ilya681/Image-Size-Zodiac)
-[![کاهش حجم عکس](https://img.shields.io/badge/کاهش%20حجم-تا%2080%25-brightgreen)](https://ilya681.github.io/Image-Size-Zodiac/)
+[![ساخته شده با HTML/CSS/JS](https://img.shields.io/badge/ساخته%20شده%20با-HTML%2FCSS%2FJS-orange)](https://github.com/ilya681/Image-Size-Phoenix)
+[![کاهش حجم عکس](https://img.shields.io/badge/کاهش%20حجم-تا%2080%25-brightgreen)](https://ilya681.github.io/Image-Size-phoenix/)
 [![مجوز MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## 🌟 درباره پروژه
 این ابزار به شما امکان می‌دهد حجم فایل تصاویر خود را به شدت کاهش دهید بدون اینکه کیفیت قابل مشاهده‌ای از دست برود. تمام عملیات در مرورگر شما انجام می‌شود، بنابراین تصاویر شما هرگز به سرور ما ارسال نمی‌شوند – امن و خصوصی.
 
-**نام مخزن (`Image-Size-Zodiac`) صرفاً یک اسم قدیمی است و ربطی به طالع‌بینی ندارد. این پروژه یک ابزار کاربردی برای کاهش حجم عکس است.**
+**پروژه قبلاً با نام `Image-Size-Zodiac` شناخته می‌شد، اما اکنون به **ققنوس (Phoenix)** تغییر نام یافته است. عملکرد ابزار کاملاً یکسان و حتی بهتر شده است.**
 
 ## ✨ ویژگی‌ها
 - 📉 کاهش حجم تا ۸۰٪ (مثلاً از ۵ مگابایت به ۱ مگابایت)
@@ -22,7 +22,7 @@
 
 ## 🖥️ دموی زنده
 برای استفاده از ابزار، روی لینک زیر کلیک کنید:
-👉 **[https://ilya681.github.io/Image-Size-Zodiac/](https://ilya681.github.io/Image-Size-Zodiac/)**
+👉 **[https://ilya681.github.io/Image-Size-phoenix/](https://ilya681.github.io/Image-Size-phoenix/)**
 
 ## 🚀 نحوه استفاده
 1. روی دکمه «آماده‌ای شروع کنی! پس بزن بریم» کلیک کنید.
@@ -49,6 +49,7 @@
 
 صفحه شامل تگ‌های متا، Open Graph، توییتر کارت، لینک canonical و ساختار صحیح HTML است.
 
+
 ## 🤝 مشارکت در توسعه
 اگر ایده یا بهبودی دارید، خوشحال می‌شوم کمک کنید:
 1. مخزن را فورک کنید.
@@ -61,8 +62,8 @@
 این پروژه تحت مجوز **MIT** منتشر شده است – استفاده آزاد، حتی برای پروژه‌های تجاری.
 
 ## 📞 ارتباط
-- **مشاهده سایت:** [https://ilya681.github.io/Image-Size-Zodiac/](https://ilya681.github.io/Image-Size-Zodiac/)
-- **گزارش مشکل:** [صفحه Issues](https://github.com/ilya681/Image-Size-Zodiac/issues)
+- **مشاهده سایت:** [https://ilya681.github.io/Image-Size-phoenix/](https://ilya681.github.io/Image-Size-phoenix/)
+- **گزارش مشکل:** [صفحه Issues](https://github.com/ilya681/Image-Size-Phoenix/issues) (توجه: نام مخزن به زودی تغییر خواهد کرد)
 
 ---
 ⭐️ اگر این ابزار برای شما مفید بود، لطفاً با **ستاره** دادن به مخزن از آن حمایت کنید تا دیگران هم آن را پیدا کنند.
