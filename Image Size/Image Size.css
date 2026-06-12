@@ -242,6 +242,7 @@ input::placeholder {
   flex-direction: column;
   position: relative;
   padding: 10px;
+  direction: ltr;
 }
 
 .div-img {
