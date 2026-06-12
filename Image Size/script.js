@@ -160,7 +160,7 @@ save.addEventListener("click", () => {
   const url = URL.createObjectURL(currentBlob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = `Zodiac  ${today.getHours()}-${today.getMinutes()}-${today.getSeconds()}.${format}`;
+  link.download = `Phoenix-ققنوس-  ${today.getHours()}-${today.getMinutes()}-${today.getSeconds()}.${format}`;
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -168,11 +168,11 @@ save.addEventListener("click", () => {
 });
 
 hamburger.addEventListener("click", () => {
-  divChoose.style.left = "0%";
+  divChoose.style.right = "0%";
 });
 
 cloes.addEventListener("click", () => {
-  divChoose.style.left = "-100%";
+  divChoose.style.right = "-100%";
 });
 
 FormatChooser.addEventListener("click", () => {
