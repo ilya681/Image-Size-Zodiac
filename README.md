@@ -50,3 +50,30 @@
 صفحه شامل تگ‌های متا، Open Graph، توییتر کارت، لینک canonical و ساختار صحیح HTML است.
 
 ## 📂 ساختار پروژه
+
+Image-Size-Zodiac/
+├── index.html # صفحه اصلی (ورودی)
+├── style.css # استایل‌های سایت
+├── Image Size/ # پوشه حاوی ابزار اصلی
+│ └── Image Size.html # صفحه ابزار کاهش حجم عکس
+├── img/ # تصاویر پروژه (آیکون و ...)
+└── README.md # این فایل
+
+
+## 🤝 مشارکت در توسعه
+اگر ایده یا بهبودی دارید، خوشحال می‌شوم کمک کنید:
+1. مخزن را فورک کنید.
+2. یک برنچ جدید بسازید (`git checkout -b feature/YourIdea`).
+3. تغییرات را کامیت کنید (`git commit -m 'Add something awesome'`).
+4. پوش کنید (`git push origin feature/YourIdea`).
+5. یک Pull Request باز کنید.
+
+## 📜 مجوز
+این پروژه تحت مجوز **MIT** منتشر شده است – استفاده آزاد، حتی برای پروژه‌های تجاری.
+
+## 📞 ارتباط
+- **مشاهده سایت:** [https://ilya681.github.io/Image-Size-Zodiac/](https://ilya681.github.io/Image-Size-Zodiac/)
+- **گزارش مشکل:** [صفحه Issues](https://github.com/ilya681/Image-Size-Zodiac/issues)
+
+---
+⭐️ اگر این ابزار برای شما مفید بود، لطفاً با **ستاره** دادن به مخزن از آن حمایت کنید تا دیگران هم آن را پیدا کنند.
