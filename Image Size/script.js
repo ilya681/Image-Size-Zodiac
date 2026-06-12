@@ -7,10 +7,12 @@ const number = document.querySelector(".number");
 const Show = document.querySelector(".Show");
 const width = document.querySelector(".width");
 const height = document.querySelector(".height");
+const MB = document.querySelector(".MB");
 const KB = document.querySelector(".KB");
 const B = document.querySelector(".B");
 const Newwidth = document.querySelector(".Newwidth");
 const Newheight = document.querySelector(".Newheight");
+const NewMB = document.querySelector(".NewMB");
 const NewKB = document.querySelector(".NewKB");
 const NewB = document.querySelector(".NewB");
 const save = document.querySelector(".SAVE");
@@ -58,15 +60,18 @@ chooseFile.addEventListener("change", (event) => {
 
   Newwidth.innerHTML = "";
   Newheight.innerHTML = "";
+  NewMB.innerHTML = "";
   NewKB.innerHTML = "";
   NewB.innerHTML = "";
   number.value = "";
   FormatChooser_P.innerHTML = "";
-  FormatChooser_P.innerText = "Chooser Format";
+  FormatChooser_P.innerText = "انتخاب فرمت";
 
   const originalSizeKB = (file.size / 1024).toFixed(2);
-  KB.innerText = `KB => ${originalSizeKB}`;
-  B.innerText = `B => ${file.size}`;
+  const originalSizeMB = (file.size / 1024 / 1024).toFixed(2);
+  MB.innerText = `مگابایت => ${originalSizeMB}`;
+  KB.innerText = `کیلوبایت => ${originalSizeKB}`;
+  B.innerText = `بایت => ${file.size}`;
 
   const url = URL.createObjectURL(file);
   img2Big.src = url;
@@ -78,12 +83,8 @@ chooseFile.addEventListener("change", (event) => {
     img.onload = function () {
       originalImg = img;
 
-      // document.querySelector(".div-img").style.width = `${img.width}px`;
-      // document.querySelector(".div-img").style.height = `${img.height}px`;
-      // document.querySelector(".div-x").style.width = `${img.width}px`;
-      // document.querySelector(".div-x").style.height = `${img.height}px`;
-      width.innerText = `Width => ${img.width}px`;
-      height.innerText = `Height => ${img.height}px`;
+      width.innerText = `عرض => ${img.width}px`;
+      height.innerText = `ارتفاع => ${img.height}px`;
       // اطلاعات ارتفاع و عرض اصلی را هم پاک نکنید
     };
     img.src = e.target.result;
@@ -122,8 +123,8 @@ function Resolutioan(Format) {
   canvas.width = newWidth;
   canvas.height = newHeight;
 
-  Newwidth.innerText = `New Width => ${Math.round(newWidth)}px`;
-  Newheight.innerText = `New Height => ${Math.round(newHeight)}px`;
+  Newwidth.innerText = `عرض جدید => ${Math.round(newWidth)}px`;
+  Newheight.innerText = `ارتفاع جدید => ${Math.round(newHeight)}px`;
 
   const ctx = canvas.getContext("2d");
   ctx.drawImage(originalImg, 0, 0, newWidth, newHeight);
@@ -133,8 +134,10 @@ function Resolutioan(Format) {
       if (blob) {
         currentBlob = blob;
         const sizeKB = (blob.size / 1024).toFixed(2);
-        NewKB.innerText = `KB => ${sizeKB}`;
-        NewB.innerText = `B => ${blob.size}`;
+        const sizeMG = (blob.size / 1024 / 1024).toFixed(2);
+        NewMB.innerText = `مگابایت جدید => ${sizeMG}`;
+        NewKB.innerText = `کیلوبایت جدید => ${sizeKB}`;
+        NewB.innerText = `بایت جدید => ${blob.size}`;
         const url = URL.createObjectURL(blob);
         img1Small.src = url;
         img1Small.onload = () => URL.revokeObjectURL(url);

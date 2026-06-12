@@ -21,7 +21,6 @@ body {
   position: relative;
 }
 
-
 .hamburger {
   width: 50px;
   position: absolute;
@@ -177,7 +176,7 @@ input::placeholder {
   font-weight: bold;
 }
 .liChooser:hover {
-  transform: scale(1.1) translateX(20px);
+  transform: scale(1.1) translateX(-20px);
 }
 
 .Show {
@@ -201,10 +200,12 @@ input::placeholder {
 }
 .div-Chooser .width,
 .height,
+.MB,
 .KB,
 .B,
 .NewB,
 .NewKB,
+.NewMB,
 .Newheight,
 .Newwidth {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
