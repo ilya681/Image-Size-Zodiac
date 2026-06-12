@@ -177,15 +177,14 @@ cloes.addEventListener("click", () => {
 
 FormatChooser.addEventListener("click", () => {
   if (!isclicked_FormatChooser) {
-    ulChooser.style.zIndex = "10";
-    ulChooser.style.opacity = "1";
-    FormatChooser.style.borderBottomLeftRadius = "0px";
+    // ulChooser.style.zIndex = "10";
+    // ulChooser.style.opacity = "1";
+    FormatChooser.style.height = "500px";
 
     isclicked_FormatChooser = true;
   } else {
-    FormatChooser.style.borderBottomLeftRadius = "10px";
-    ulChooser.style.zIndex = "-10";
-    ulChooser.style.opacity = "0";
+    FormatChooser.style.height = "50px";
+
     isclicked_FormatChooser = false;
   }
 });

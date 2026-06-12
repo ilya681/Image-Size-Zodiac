@@ -127,57 +127,66 @@ input::placeholder {
 .FormatChooser {
   height: 50px;
   cursor: pointer;
-  align-items: start;
-  justify-content: space-around;
-  flex-direction: column;
+  overflow: visible;
   display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
   gap: 1px;
   padding: 0;
   transition: all 0.5s ease-in-out;
+  position: relative;
 }
+
 .FormatChooser p {
-  margin: 5px 5px;
+  margin: 5px;
   color: #dcd7c2;
   text-align: center;
-  padding: 6px 10px;
+  padding: 5px;
   width: max-content;
   height: max-content;
-  border-radius: 8px; /* گوشه‌های گرد */
+  border-radius: 8px;
   font-size: 20px;
   background-color: #1a1110;
   position: relative;
   transition: all 0.15s ease-in-out;
+  z-index: 2;
 }
+
 .FormatChooser p:hover {
   background-color: #c17a4a;
 }
 
 .ulChooser {
-  width: 50%;
-  height: max-content;
+  width: 100%;
+  overflow: hidden;
   position: relative;
-  background-color: #c17a4a;
-  z-index: -10;
-  opacity: 0;
   margin: 0;
   transition: all 0.5s ease-in-out;
-  border: 3px solid rgb(107, 52, 52);
-  border-top: 0px solid black;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
   padding: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+
 .liChooser {
-  width: 100%;
+  width: 90%;
   height: max-content;
   list-style-type: none;
-  margin: 10px 10px;
+  margin: 5px 0px;
   font-size: 25px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease-in-out;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
 }
+
 .liChooser:hover {
-  transform: scale(1.1) translateX(-20px);
+  transform: scale(1.1);
 }
 
 .Show {
@@ -324,7 +333,7 @@ input::placeholder {
 @media screen and (max-width: 1000px) {
   .div-Chooser {
     position: absolute;
-    width: 30%;
+    width: 40%;
     z-index: 10;
     right: -100%;
   }
@@ -345,7 +354,7 @@ input::placeholder {
 
 @media screen and (max-width: 600px) {
   .div-Chooser {
-    width: 45%;
+    width: 50%;
     zoom: 85%;
   }
   .div-img {
@@ -365,7 +374,7 @@ input::placeholder {
 }
 @media screen and (max-width: 350px) {
   .div-Chooser {
-    width: 60%;
+    width: 50%;
   }
   .div-img {
     height: 40%;
