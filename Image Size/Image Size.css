@@ -81,8 +81,7 @@ h2 {
 }
 .div-Chooser .number,
 .quality,
-.choose-file,
-.FormatChooser {
+.choose-file {
   padding: 10px;
   border: 3px solid rgb(107, 52, 52);
   border-radius: 10px;
@@ -126,27 +125,29 @@ input::placeholder {
 
 .FormatChooser {
   height: 50px;
+  background-color: #c17a4a;
+  border: 3px solid rgb(107, 52, 52);
+  border-radius: 10px;
   cursor: pointer;
   overflow: visible;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  flex-direction: column;
-  gap: 1px;
   padding: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   position: relative;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .FormatChooser p {
-  margin: 5px;
-  color: #dcd7c2;
-  text-align: center;
-  padding: 5px;
+  margin: 0;
   width: max-content;
-  height: max-content;
+  padding: 5px 20px;
+  margin-top: 2px;
+  text-align: center;
+  color: #dcd7c2;
   border-radius: 8px;
-  font-size: 20px;
+  /* font-size: 20px; */
   background-color: #1a1110;
   position: relative;
   transition: all 0.15s ease-in-out;
@@ -162,6 +163,8 @@ input::placeholder {
   overflow: hidden;
   position: relative;
   margin: 0;
+  z-index: -10;
+  opacity: 0;
   transition: all 0.5s ease-in-out;
   border-radius: 10px;
   padding: 5px;
@@ -333,7 +336,7 @@ input::placeholder {
 @media screen and (max-width: 1000px) {
   .div-Chooser {
     position: absolute;
-    width: 40%;
+    width: 50%;
     z-index: 10;
     right: -100%;
   }
@@ -348,7 +351,14 @@ input::placeholder {
 }
 @media screen and (max-width: 800px) {
   .div-Chooser {
-    width: 40%;
+    width: 50%;
+  }
+  .Newwidth,
+  .Newheight,
+  .NewMB,
+  .NewKB,
+  .NewB {
+    font-size: 18px;
   }
 }
 

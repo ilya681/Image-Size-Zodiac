@@ -16,6 +16,17 @@ body {
   padding: 0;
   font-size: 100%;
   line-height: 1.5;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+  z-index: 50px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #c17a4a;
+  border-radius: 5px;
+  z-index: 50px;
 }
 
 header {
@@ -54,7 +65,7 @@ main {
 .div-Work-training {
   flex: 1;
   min-width: 250px;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 16px;
   padding: 15px;
 }
@@ -91,7 +102,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 16px;
   padding: 20px;
 }
@@ -109,15 +120,7 @@ li {
   justify-content: center;
 }
 
-.arrow {
-  transform: translateX(10px);
-  transition: all 0.3s ease-in-out;
-  display: inline-block;
-}
 
-.Go-Image-Size a:hover .arrow {
-  transform: translateX(-10px);
-}
 
 .Go-Image-Size a:hover {
   text-decoration: 1px wavy underline;
@@ -142,11 +145,13 @@ li {
 }
 
 footer {
+  position: sticky;
+  top: 100%;
   width: 100%;
   text-align: center;
   padding: 20px;
   color: #f9b23f;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
   margin-top: 40px;
 }
 
